@@ -17,7 +17,11 @@ struct ContentView: View {
                     Spacer().frame(height: 30)
                     
                     ForEach(Item.stub()) { item in
-                        ListItemView(item: item)
+                        NavigationLink {
+                            DetailScreen(item: item)
+                        } label: {
+                            ListItemView(item: item)
+                        }
                     }
                 }
             }
@@ -37,5 +41,7 @@ extension ContentView {
 }
 
 #Preview {
-    ContentView()
+    NavigationStack {
+        ContentView()
+    }
 }

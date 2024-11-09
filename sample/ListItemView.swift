@@ -24,7 +24,7 @@ struct ListItemView: View {
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity, alignment: .leading)
                 
-                Text(item.description)
+                Text(item.dimension)
                     .foregroundStyle(.white)
                 
                 Spacer()
