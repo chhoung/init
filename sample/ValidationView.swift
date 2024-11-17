@@ -8,6 +8,7 @@ import SwiftUI
 
 struct ValidationView: View {
     @State var searchText: String = ""
+    @State var isLoading: Bool = false
     
     var isValid: Bool {
         return !searchText.isEmpty
@@ -24,15 +25,20 @@ struct ValidationView: View {
             Spacer().frame(height: 16)
             
             Button {
-                
+                login()
             } label: {
-                Text("Login")
+                Text(isLoading ? "" : "Login")
                     .font(.system(size: 17, weight: .semibold))
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)
                     .frame(height: 48)
                     .background(Color.accentColor)
                     .clipShape(RoundedRectangle(cornerSize: CGSize(width: 8, height: 0)))
+                    .overlay {
+                        if isLoading {
+                            ProgressView()
+                        }
+                    }
             }
             .disabled(!isValid)
         }
@@ -41,6 +47,25 @@ struct ValidationView: View {
         .background(Color.black)
     }
 }
+
+extension ValidationView {
+    private func login() {
+        Task {
+            isLoading = true
+            try await Task.sleep(nanoseconds: 2000000000)
+            
+            if searchText == correctPassword {
+                print("Success login")
+            } else {
+                print("Error")
+            }
+            
+            isLoading = false
+        }
+    }
+}
+
+let correctPassword = "123456"
 
 #Preview {
     ValidationView()

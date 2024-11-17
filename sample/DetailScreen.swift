@@ -52,5 +52,5 @@ extension DetailScreen {
 }
 
 #Preview {
-    DetailScreen(item: Item.stub()[1])
+    DetailScreen(item: Item.stub()[0])
 }
