@@ -9,9 +9,15 @@ import SwiftUI
 struct ValidationView: View {
     @State var searchText: String = ""
     @State var isLoading: Bool = false
+    @State var showDialog: Bool = false
+    @State var success: Bool = false
     
     var isValid: Bool {
         return !searchText.isEmpty
+    }
+    
+    var disabled: Bool {
+        return !isValid || isLoading
     }
     
     var body: some View {
@@ -40,8 +46,18 @@ struct ValidationView: View {
                         }
                     }
             }
-            .disabled(!isValid)
+            .disabled(disabled)
         }
+        .alert("Your password is not correct ❌, Please try again!", isPresented: $showDialog, actions: {
+            Button("OK", role: .cancel) {}
+        })
+        .alert("Success ✅", isPresented: $success, actions: {
+            Button(action: {
+                navigateToHome()
+            }, label: {
+                Text("OK")
+            })
+        })
         .padding(.horizontal)
         .frame(maxHeight: .infinity)
         .background(Color.black)
@@ -55,13 +71,18 @@ extension ValidationView {
             try await Task.sleep(nanoseconds: 2000000000)
             
             if searchText == correctPassword {
-                print("Success login")
+                success = true
             } else {
-                print("Error")
+                showDialog = true
             }
             
             isLoading = false
         }
+    }
+    
+    private func navigateToHome() {
+        success = false
+        print("Navigation to home screen....")
     }
 }
 
