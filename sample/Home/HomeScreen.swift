@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeScreen: View {
     var body: some View {
         ZStack {
             Color.clear.background(background)
@@ -29,7 +29,7 @@ struct ContentView: View {
     }
 }
 
-extension ContentView {
+extension HomeScreen {
     var background: some View {
         Image("m1")
             .resizable()
@@ -42,6 +42,6 @@ extension ContentView {
 
 #Preview {
     NavigationStack {
-        ContentView()
+        HomeScreen()
     }
 }

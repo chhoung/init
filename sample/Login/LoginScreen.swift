@@ -6,7 +6,8 @@
 //  
 import SwiftUI
 
-struct ValidationView: View {
+struct LoginScreen: View {
+    @AppStorage("isLoggedIn") var isLoggedIn = false
     @State var searchText: String = ""
     @State var isLoading: Bool = false
     @State var showDialog: Bool = false
@@ -64,7 +65,7 @@ struct ValidationView: View {
     }
 }
 
-extension ValidationView {
+extension LoginScreen {
     private func login() {
         Task {
             isLoading = true
@@ -83,11 +84,12 @@ extension ValidationView {
     private func navigateToHome() {
         success = false
         print("Navigation to home screen....")
+        isLoggedIn = true
     }
 }
 
 let correctPassword = "123456"
 
 #Preview {
-    ValidationView()
+    LoginScreen()
 }

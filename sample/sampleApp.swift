@@ -9,10 +9,16 @@ import SwiftUI
 
 @main
 struct sampleApp: App {
+    @AppStorage("isLoggedIn") var isLoggedIn: Bool = false
+    
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                ValidationView()
+                if isLoggedIn {
+                    HomeScreen()
+                } else {
+                    LoginScreen()
+                }
             }
         }
     }

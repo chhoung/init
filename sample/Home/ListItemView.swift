@@ -37,8 +37,5 @@ struct ListItemView: View {
 
 #Preview {
     ListItemView(item: Item.stub()[0])
-        .previewLayout(.sizeThatFits)
-        .background {
-            Color.black
-        }
+        .background(Color.black)
 }

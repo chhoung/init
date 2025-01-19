@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0E25EB232C8C7B4A0089FC9B /* sampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25EB222C8C7B4A0089FC9B /* sampleApp.swift */; };
-		0E25EB252C8C7B4A0089FC9B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25EB242C8C7B4A0089FC9B /* ContentView.swift */; };
+		0E25EB252C8C7B4A0089FC9B /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E25EB242C8C7B4A0089FC9B /* HomeScreen.swift */; };
 		0E25EB272C8C7B4A0089FC9B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E25EB262C8C7B4A0089FC9B /* Assets.xcassets */; };
 		0E25EB2A2C8C7B4A0089FC9B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E25EB292C8C7B4A0089FC9B /* Preview Assets.xcassets */; };
 		0E291E382C8F1D7E00C50DA2 /* ListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E291E372C8F1D7E00C50DA2 /* ListItemView.swift */; };
 		0E291E3A2C8F288D00C50DA2 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E291E392C8F288D00C50DA2 /* Item.swift */; };
 		0E7972762CDF0693005BF02E /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7972752CDF0693005BF02E /* DetailScreen.swift */; };
-		0E80A79C2CAC291400732E0F /* ValidationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80A79B2CAC291400732E0F /* ValidationView.swift */; };
+		0E80A79C2CAC291400732E0F /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E80A79B2CAC291400732E0F /* LoginScreen.swift */; };
 		0EBB7ED42C8D1CE2007FE3B0 /* SampleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBB7ED32C8D1CE2007FE3B0 /* SampleAPI.swift */; };
 		0EBB7ED62C8D1CEB007FE3B0 /* SampleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBB7ED52C8D1CEB007FE3B0 /* SampleService.swift */; };
 /* End PBXBuildFile section */
@@ -22,13 +22,13 @@
 /* Begin PBXFileReference section */
 		0E25EB1F2C8C7B4A0089FC9B /* sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E25EB222C8C7B4A0089FC9B /* sampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleApp.swift; sourceTree = "<group>"; };
-		0E25EB242C8C7B4A0089FC9B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		0E25EB242C8C7B4A0089FC9B /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		0E25EB262C8C7B4A0089FC9B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E25EB292C8C7B4A0089FC9B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0E291E372C8F1D7E00C50DA2 /* ListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemView.swift; sourceTree = "<group>"; };
 		0E291E392C8F288D00C50DA2 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		0E7972752CDF0693005BF02E /* DetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailScreen.swift; sourceTree = "<group>"; };
-		0E80A79B2CAC291400732E0F /* ValidationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationView.swift; sourceTree = "<group>"; };
+		0E80A79B2CAC291400732E0F /* LoginScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreen.swift; sourceTree = "<group>"; };
 		0EBB7ED32C8D1CE2007FE3B0 /* SampleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleAPI.swift; sourceTree = "<group>"; };
 		0EBB7ED52C8D1CEB007FE3B0 /* SampleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -63,15 +63,14 @@
 		0E25EB212C8C7B4A0089FC9B /* sample */ = {
 			isa = PBXGroup;
 			children = (
+				0E3A35002D3CF3EB0042BD0C /* Model */,
+				0E3A34FF2D3CF3DE0042BD0C /* Detail */,
+				0E3A34FE2D3CF3BB0042BD0C /* Home */,
+				0E3A34FD2D3CF3980042BD0C /* Login */,
 				0E25EB302C8C7CC70089FC9B /* Networking */,
-				0E291E392C8F288D00C50DA2 /* Item.swift */,
-				0E291E372C8F1D7E00C50DA2 /* ListItemView.swift */,
 				0E25EB222C8C7B4A0089FC9B /* sampleApp.swift */,
-				0E7972752CDF0693005BF02E /* DetailScreen.swift */,
-				0E25EB242C8C7B4A0089FC9B /* ContentView.swift */,
 				0E25EB262C8C7B4A0089FC9B /* Assets.xcassets */,
 				0E25EB282C8C7B4A0089FC9B /* Preview Content */,
-				0E80A79B2CAC291400732E0F /* ValidationView.swift */,
 			);
 			path = sample;
 			sourceTree = "<group>";
@@ -91,6 +90,39 @@
 				0EBB7ED52C8D1CEB007FE3B0 /* SampleService.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		0E3A34FD2D3CF3980042BD0C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				0E80A79B2CAC291400732E0F /* LoginScreen.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		0E3A34FE2D3CF3BB0042BD0C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				0E291E372C8F1D7E00C50DA2 /* ListItemView.swift */,
+				0E25EB242C8C7B4A0089FC9B /* HomeScreen.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		0E3A34FF2D3CF3DE0042BD0C /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				0E7972752CDF0693005BF02E /* DetailScreen.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		0E3A35002D3CF3EB0042BD0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E291E392C8F288D00C50DA2 /* Item.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,9 +197,9 @@
 			files = (
 				0E7972762CDF0693005BF02E /* DetailScreen.swift in Sources */,
 				0E291E382C8F1D7E00C50DA2 /* ListItemView.swift in Sources */,
-				0E25EB252C8C7B4A0089FC9B /* ContentView.swift in Sources */,
+				0E25EB252C8C7B4A0089FC9B /* HomeScreen.swift in Sources */,
 				0EBB7ED62C8D1CEB007FE3B0 /* SampleService.swift in Sources */,
-				0E80A79C2CAC291400732E0F /* ValidationView.swift in Sources */,
+				0E80A79C2CAC291400732E0F /* LoginScreen.swift in Sources */,
 				0EBB7ED42C8D1CE2007FE3B0 /* SampleAPI.swift in Sources */,
 				0E291E3A2C8F288D00C50DA2 /* Item.swift in Sources */,
 				0E25EB232C8C7B4A0089FC9B /* sampleApp.swift in Sources */,
