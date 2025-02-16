@@ -15,7 +15,7 @@ struct sampleApp: App {
         WindowGroup {
             NavigationStack {
                 if isLoggedIn {
-                    HomeScreen()
+                    MainScreen()
                 } else {
                     LoginScreen()
                 }
