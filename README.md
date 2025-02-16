@@ -15,3 +15,4 @@ What's been added so far:
 2. Part 2 - Navigation to new screen
 3. Loading Button
 4. Alert Popup
+5. Login State
